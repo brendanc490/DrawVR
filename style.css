@@ -7,6 +7,22 @@
     font-family: "Bungee Inline", cursive;
   }
 
+#info{
+  position: absolute;
+  max-height: 90vh;
+  left: 5%;
+  top: 5%;
+  background-color: rgba(211,211,211, 1);
+  color: Black;
+  padding: 1em;
+  overflow-y:auto;
+  overflow-x:auto;
+}
+.hand {
+  color: #000000;
+  font-family: "Bungee Inline", cursive;
+}
+
   #titleContent{
     position: absolute;
     left: 10px;

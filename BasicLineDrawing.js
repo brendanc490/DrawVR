@@ -237,3 +237,6 @@ scene.addEventListener('exit-vr', function () {
     // stop the interval
     clearInterval(interval)
  });
+
+ // TODO
+ // make eraser on left tip and swap on hand swap
