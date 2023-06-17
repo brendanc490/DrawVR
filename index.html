@@ -44,7 +44,7 @@
             <!-- Sets the camera rig, useful for moving the camera with joystick (NOT YET IMPLEMENTED) -->
             <a-entity id="rig">
                 <!-- Creates the camera -->
-                <a-camera id="menuCam" position="0 1 8" wasd-controls-enabled="false"></a-camera>
+                <a-camera id="menuCam" position="0 1 8" wasd-controls="acceleration:30" vert-movement-listener></a-camera>
             </a-entity>
             <!-- Creates the entity to which the lines will be added to -->
             <a-entity id="canvas" position="0 0 0"></a-entity>
@@ -128,4 +128,5 @@
 
 <script src="BasicLineDrawing.js"></script>
 <script src="utilities.js"></script>
+<script src="vertMovementScript.js"></script>
 <!--<script src="drawingScript.js"></script>-->
