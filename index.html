@@ -44,7 +44,9 @@
             <!-- Sets the camera rig, useful for moving the camera with joystick (NOT YET IMPLEMENTED) -->
             <a-entity id="rig">
                 <!-- Creates the camera -->
-                <a-camera id="menuCam" position="0 1 8" wasd-controls="acceleration:30" vert-movement-listener></a-camera>
+                <a-camera id="menuCam" position="0 1 8" wasd-controls="acceleration:30" vert-movement-listener>
+                    <!--<a-sphere id="pc-control-sphere" src="lib/bristles.jpg" material="shader: flat; color: white" position="0 0 -1" radius=".05" visible="true" cursor="fuse: true; fuseTimeout: 500"></a-sphere>-->
+                </a-camera>
             </a-entity>
             <!-- Creates the entity to which the lines will be added to -->
             <a-entity id="canvas" position="0 0 0"></a-entity>
