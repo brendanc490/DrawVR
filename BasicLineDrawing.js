@@ -225,6 +225,7 @@ conLeft.setAttribute('pressed',false)
 scene.addEventListener('enter-vr', function () {
 
     // show both tips
+    document.body.style.cursor = "none"
     tipR.setAttribute('visible',true)
     tipL.setAttribute('visible',true)
     // set right hand as default brush
@@ -236,6 +237,7 @@ scene.addEventListener('enter-vr', function () {
 scene.addEventListener('exit-vr', function () {
     // stop the interval
     clearInterval(interval)
+    document.body.style.cursor = "default"
  });
 
  // TODO

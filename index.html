@@ -42,10 +42,10 @@
                 <a-sphere id="tipL" src="lib/eraser.jpg" material="shader: flat; color: white" position="0 0 0" radius=".005" visible="false"></a-sphere>
             </a-entity>
             <!-- Sets the camera rig, useful for moving the camera with joystick (NOT YET IMPLEMENTED) -->
-            <a-entity id="rig">
+            <a-entity id="rig" position="0 1 8" >
                 <!-- Creates the camera -->
-                <a-camera id="menuCam" position="0 1 8" wasd-controls="acceleration:30" vert-movement-listener>
-                    <!--<a-sphere id="pc-control-sphere" src="lib/bristles.jpg" material="shader: flat; color: white" position="0 0 -1" radius=".05" visible="true" cursor="fuse: true; fuseTimeout: 500"></a-sphere>-->
+                <a-camera id="menuCam" wasd-controls="acceleration:30" vert-movement-listener look-controls="pointerLockEnabled: true;">
+                    <a-sphere id="pc-control-sphere" src="lib/bristles.jpg" material="color: white" position="0 0 -1" radius=".05" visible="true" cursor="fuse: true; fuseTimeout: 500"></a-sphere>
                 </a-camera>
             </a-entity>
             <!-- Creates the entity to which the lines will be added to -->

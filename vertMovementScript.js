@@ -17,7 +17,5 @@ AFRAME.registerComponent('vert-movement-listener', {
 });
 
 document.addEventListener("mousemove", function (e) {
-    
-    menuCam.components['look-controls'].pitchObject.rotation.set(Math.PI/180*(menuCam.components['look-controls'].pitchObject.rotation.x + e.movementX),0,0);
-    menuCam.components['look-controls'].yawObject.rotation.set(0,Math.PI/180*(menuCam.components['look-controls'].pitchObject.rotation.y + e.movementY),0);
+    //menuCamRig.setAttribute('rotation', {x: menuCamRig.getAttribute('rotation').x - e.movementY*.1, y: menuCamRig.getAttribute('rotation').y - e.movementX*.1, z: 0});
 });
