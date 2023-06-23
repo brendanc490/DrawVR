@@ -44,7 +44,7 @@
             <!-- Sets the camera rig, useful for moving the camera with joystick (NOT YET IMPLEMENTED) -->
             <a-entity id="rig" position="0 1 8" >
                 <!-- Creates the camera -->
-                <a-camera id="menuCam" wasd-controls="acceleration:30" vert-movement-listener look-controls="pointerLockEnabled: true;">
+                <a-camera id="menuCam" wasd-controls="acceleration:30" vert-movement-listener look-controls-custom="pointerLockEnabled: true;">
                     <a-sphere id="pc-control-sphere" src="lib/bristles.jpg" material="color: white" position="0 0 -1" radius=".05" visible="true" cursor="fuse: true; fuseTimeout: 500"></a-sphere>
                 </a-camera>
             </a-entity>
@@ -122,6 +122,10 @@
             </p>
 
             <p class="text"><button onclick="randomizeLayout()">Randomize Layout</button></p>
+
+            <p class="text"><b>Sensitivity</b><p>
+                <input type="range" min="0.1" max="2" value="1" class="slider" id="sensitivity" step="0.05" onchange="updateSens()"></p>
+            </p>
         </div>
         
 
