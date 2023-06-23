@@ -92,7 +92,7 @@ AFRAME.registerComponent('button-listener-r', {
         var el = this.el;
 
         el.addEventListener('gripdown', function (evt) {
-
+            redo()
         });
 
         el.addEventListener('gripup', function (evt) {
@@ -100,22 +100,23 @@ AFRAME.registerComponent('button-listener-r', {
         });
 
         el.addEventListener('triggerdown', function (evt) {
-
+            this.setAttribute('pressed',true)
+            nextStroke()
         });
 
         el.addEventListener('triggerup', function (evt) {
-
+            this.setAttribute('pressed',false)
         });
 
         el.addEventListener('abuttondown', function (evt) {
-
+            changeColor(true,true)
         });
         el.addEventListener('abuttonup', function (evt) {
 
         });
 
         el.addEventListener('bbuttondown', function (evt) {
-
+            changeColor(true,false)
         });
 
         el.addEventListener('bbuttonup', function (evt) {
@@ -127,7 +128,7 @@ AFRAME.registerComponent('button-listener-r', {
         });*/
 
         el.addEventListener('thumbstickdown', function (evt) {
-
+            changeBrushHand(true)
         });
 
         el.addEventListener('thumbstickup', function (evt) {
@@ -152,12 +153,12 @@ AFRAME.registerComponent('button-listener-r', {
     }
 });
 
-AFRAME.registerComponent('button-listener-l', {
+AFRAME.registerComponent('button-listener-r', {
     init: function () {
         var el = this.el;
 
         el.addEventListener('gripdown', function (evt) {
-
+            undo()
         });
 
         el.addEventListener('gripup', function (evt) {
@@ -165,26 +166,26 @@ AFRAME.registerComponent('button-listener-l', {
         });
 
         el.addEventListener('triggerdown', function (evt) {
-
+            this.setAttribute('pressed',true)
+            nextStroke()
         });
 
         el.addEventListener('triggerup', function (evt) {
+            this.setAttribute('pressed',false)
+        });
+
+        el.addEventListener('abuttondown', function (evt) {
+            changeColor(false,true)
+        });
+        el.addEventListener('abuttonup', function (evt) {
 
         });
 
-        el.addEventListener('xbuttondown', function (evt) {
-
+        el.addEventListener('bbuttondown', function (evt) {
+            changeColor(false,false)
         });
 
-        el.addEventListener('xbuttonup', function (evt) {
-
-        });
-
-        el.addEventListener('ybuttondown', function (evt) {
-
-        });
-
-        el.addEventListener('ybuttonup', function (evt) {
+        el.addEventListener('bbuttonup', function (evt) {
 
         });
 
@@ -193,26 +194,27 @@ AFRAME.registerComponent('button-listener-l', {
         });*/
 
         el.addEventListener('thumbstickdown', function (evt) {
-
+            changeBrushHand(false)
         });
+
         el.addEventListener('thumbstickup', function (evt) {
-            
+        
         });
 
         el.addEventListener('trackpaddown', function (evt) {
-
+            
         });
 
         el.addEventListener('trackpadup', function (evt) {
-
+            
         });
 
         el.addEventListener('trackpadtouchstart', function (evt) {
-
+            
         });
 
         el.addEventListener('trackpadtouchend', function (evt) {
-
+            
         });
     }
 });

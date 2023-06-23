@@ -231,7 +231,7 @@ scene.addEventListener('enter-vr', function () {
     // set right hand as default brush
     changeBrushHand(RIGHT);
     // start interval
-    interval = setInterval(drawStroke, 1000 / 80)
+    interval = setInterval(drawStroke, 1000 / 60)
  });
 // when VR is exited
 scene.addEventListener('exit-vr', function () {
