@@ -6,6 +6,7 @@ var groundtexture = document.getElementById("groundtexture");
 var feature = document.getElementById("feature");
 var featureSize = document.getElementById("featureSize");
 var block = false;
+var sens = 1;
 
 
 const presets =  {
@@ -118,4 +119,6 @@ function randomizeLayout(){
     env.setAttribute("environment",currSeed);
 }
 
-
+function updateSens(){
+    sens = document.getElementById("sensitivity").value;
+}
